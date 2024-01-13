@@ -1,48 +1,62 @@
 # Dicas-Mikrotik-EVE-NG
 
-Fontes:
-<https://youtu.be/cj3qsNsBd2A>
-<https://www.redesbrasil.com/aprenda-a-instalar-e-usar-o-eve-ng-para-emular-roteadores-da-mikrotik/>
+* Fontes:
+* <https://youtu.be/cj3qsNsBd2A>
+* <https://www.redesbrasil.com/aprenda-a-instalar-e-usar-o-eve-ng-para-emular-roteadores-da-mikrotik/>
 
-Acesso web:
-```
+## Acesso web:
+
+```bash
 admin
-```
 
 ```
+
+```bash
 eve
+
 ```
 
-Acesso SSH:
-```
+## Acesso SSH:
+
+```bash
 root
-```
 
 ```
+
+```bash
 eve
+
 ```
 
 ## 
-```
-mkdir -p /opt/unetlab/addons/qemu/mikrotik-6.47.10
-```
+
+```bash
+mkdir -p /opt/unetlab/addons/qemu/mikrotik-6.49.10
 
 ```
-cd /opt/unetlab/addons/qemu/mikrotik-6.47.10
-```
+
+```bash
+cd /opt/unetlab/addons/qemu/mikrotik-6.49.10
 
 ```
-wget https://download.mikrotik.com/routeros/6.47.10/chr-6.47.10.vmdk
-```
+
+```bash
+wget https://download.mikrotik.com/routeros/6.49.10/chr-6.49.10.vmdk.zip
 
 ```
-/opt/qemu/bin/qemu-img convert -f vmdk -O qcow2 chr-6.47.10.vmdk hda.qcow2
-```
+
+```bash
+unzip chr-6.49.10.vmdk.zip
 
 ```
-/opt/unetlab/wrappers/unl_wrapper -a fixpermissions
-```
+
+```bash
+/opt/qemu/bin/qemu-img convert -f vmdk -O qcow2 chr-6.49.10.vmdk hda.qcow2
 
 ```
-rm -rf chr-6.47.10.vmdk
+
+```bash
+rm -rf chr*
+
 ```
+
